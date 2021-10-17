@@ -1,10 +1,11 @@
 import React from "react"
 import Search from "./Search"
+import "./Weather.css"
 
 export default function Weather() {
     return <div className="Weather">
       <Search />
-        <h1>Berlin</h1>
+        <h1 className="mt-5">Berlin</h1>
         <div className="row">
 <div className="col-6">
     <ul>
