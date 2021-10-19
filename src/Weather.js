@@ -17,7 +17,8 @@ export default function Weather() {
 </div>
 <div className="row">
 <div className="col-6">
-    <img src="#" alt=""></img>
+    <h2>22ºC</h2>
+    <img src="https://wwwcache.wral.com/presentation/v3/images/wx/weather-day-clear.svg" alt=""></img>
 </div>
 <div className="col-6">
     <ul>
