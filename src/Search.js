@@ -4,7 +4,7 @@ import "./Search.css"
 export default function Search() {
     return <div className="Search">
         <form>
-            <div className="row">
+            <div className="row ps-5 pt-5">
                 <div className="col-9">
             <input type="search" placeholder="Enter a city" className="form-control"></input>
             </div>

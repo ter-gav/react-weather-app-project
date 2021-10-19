@@ -5,8 +5,8 @@ import "./Weather.css"
 export default function Weather() {
     return <div className="Weather">
       <Search />
-        <h1 className="mt-5">Berlin</h1>
-        <div className="row">
+        <h1 className="mt-5 ps-5">Berlin</h1>
+        <div className="row ps-5">
 <div className="col-6">
     <ul>
         <li>
@@ -20,7 +20,7 @@ export default function Weather() {
     <h2>22ºC</h2>
     <img src="https://wwwcache.wral.com/presentation/v3/images/wx/weather-day-clear.svg" alt=""></img>
 </div>
-<div className="col-6">
+<div className="col-6 ps-5 pb-5">
     <ul>
         <li>
             Humidity:
