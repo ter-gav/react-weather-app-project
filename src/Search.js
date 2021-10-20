@@ -9,7 +9,7 @@ export default function Search() {
             <input type="search" placeholder="Enter a city" className="form-control"></input>
             </div>
             <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary w-100"></input>
+            <input type="submit" value="Search" className="btn btn-success w-100"></input>
             </div>
             </div>
         </form>
