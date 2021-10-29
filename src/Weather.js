@@ -2,7 +2,9 @@ import React from "react";
 
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
+  let degrees = Math.round(props.temp);
+
   return (
     <div className="Weather">
       <h1 className="mt-5 ps-5">Berlin</h1>
@@ -15,7 +17,7 @@ export default function Weather() {
         </div>
         <div className="row">
           <div className="col-6">
-            <h2>22ºC</h2>
+            <h2>{degrees}</h2>
             <img
               src="https://wwwcache.wral.com/presentation/v3/images/wx/weather-day-clear.svg"
               alt=""
