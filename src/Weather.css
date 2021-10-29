@@ -7,3 +7,9 @@
   font-size: 58px;
   font-weight: medium;
 }
+
+.Weather .icon {
+  position: relative;
+  right: -150px;
+  top: -70px;
+}

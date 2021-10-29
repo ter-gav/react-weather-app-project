@@ -16,18 +16,25 @@ export default function Weather(props) {
             <li className="text-capitalize">{props.data.description}</li>
           </ul>
         </div>
-        <div className="row">
-          <div className="col-6">
-            <WeatherTemperature celsius={props.data.temperature} />
-            <img src={props.data.icon} alt="weather conditions"></img>
-          </div>
-          <div className="col-6 ps-5 pb-5">
-            <ul>
-              <li>Humidity: {props.data.humidity} %</li>
-              <li>Wind: {Math.round(props.data.wind)} km/h</li>
-              <li>Sunrise: </li>
-              <li>Sunset: </li>
-            </ul>
+        <div className="clearfix">
+          <div className="row mb-3">
+            <div className="col-8">
+              <WeatherTemperature celsius={props.data.temperature} />
+              <img
+                className="icon"
+                src={props.data.icon}
+                alt="weather conditions"
+              ></img>
+            </div>
+
+            <div className="col-4">
+              <ul>
+                <li>Humidity: {props.data.humidity} %</li>
+                <li>Wind: {Math.round(props.data.wind)} km/h</li>
+                <li>Sunrise: </li>
+                <li>Sunset: </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
