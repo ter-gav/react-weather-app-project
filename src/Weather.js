@@ -17,7 +17,10 @@ export default function Weather(props) {
         </div>
         <div className="row">
           <div className="col-6">
-            <h2>{Math.round(props.data.temperature)} ºC</h2>
+            <span className="temperature">
+              {Math.round(props.data.temperature)}
+            </span>
+            <span className="units"> ºC | ºF</span>
             <img src={props.data.icon} alt="weather conditions"></img>
           </div>
           <div className="col-6 ps-5 pb-5">
