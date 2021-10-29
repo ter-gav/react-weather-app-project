@@ -31,8 +31,6 @@ export default function Weather(props) {
               <ul>
                 <li>Humidity: {props.data.humidity} %</li>
                 <li>Wind: {Math.round(props.data.wind)} km/h</li>
-                <li>Sunrise: </li>
-                <li>Sunset: </li>
               </ul>
             </div>
           </div>
