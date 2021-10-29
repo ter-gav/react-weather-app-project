@@ -18,10 +18,7 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-6">
             <h2>{Math.round(props.data.temperature)} ºC</h2>
-            <img
-              src="https://wwwcache.wral.com/presentation/v3/images/wx/weather-day-clear.svg"
-              alt=""
-            ></img>
+            <img src={props.data.icon} alt="weather conditions"></img>
           </div>
           <div className="col-6 ps-5 pb-5">
             <ul>
