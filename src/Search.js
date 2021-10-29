@@ -3,26 +3,24 @@ import axios from "axios";
 import Weather from "./Weather";
 import "./Search.css";
 
-export default function Search() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+export default function Search(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
-temperature: response.data.main.temp,
-city: response.data.name,
-wind: response.data.wind.speed,
-humidity: response.data.main.humidity,
-description: response.data.weather[0].description,
-date: new Date(response.data.dt * 1000),
-icon: response.data.weather[0].icon,
-coordinates: response.data.coord,
-    }
-    setReady(true);
+      ready: true,
+      temperature: response.data.main.temp,
+      city: response.data.name,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
+    });
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Search">
         <form>
@@ -43,13 +41,12 @@ coordinates: response.data.coord,
             </div>
           </div>
         </form>
-        <Weather temp={weatherData} />
+        <Weather data={weatherData} />
       </div>
     );
   } else {
     const apiKey = "f408b458699300138b2f973b8c6a1c4a";
-    let city = "Berlin";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
 
