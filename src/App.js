@@ -1,12 +1,12 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Search from "./Search";
+import WeatherSearch from "./WeatherSearch";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search defaultCity="Berlin" />
+        <WeatherSearch defaultCity="Berlin" />
       </div>
     </div>
   );
