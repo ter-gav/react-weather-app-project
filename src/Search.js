@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Weather from "./Weather";
 import "./Search.css";
 
 export default function Search() {
@@ -31,6 +32,7 @@ export default function Search() {
           </div>
         </div>
       </form>
+      <Weather />
     </div>
   );
 }

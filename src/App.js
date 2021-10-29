@@ -1,17 +1,13 @@
-
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Weather from "./Weather"
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Search from "./Search";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-    
-    <Weather />
-    </div>
+        <Search />
+      </div>
     </div>
   );
 }
-
-
