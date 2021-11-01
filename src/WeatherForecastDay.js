@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function WeatherForecastDay(props) {
-  console.log(props.data);
-
   let icon = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
 
   function maxTemperature() {
