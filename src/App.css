@@ -9,6 +9,7 @@
     rgb(181, 255, 255) 100.5%
   );
   border-radius: 8px;
+  box-shadow: 2px 2px 2px rgb(83, 79, 79);
 }
 
 .App footer {
