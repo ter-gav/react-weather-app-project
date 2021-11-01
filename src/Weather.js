@@ -6,9 +6,9 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function Weather(props) {
   return (
     <div className="Weather">
-      <h1 className="mt-5 ps-5">{props.data.city}</h1>
-      <div className="row ps-5">
-        <div className="col-6">
+      <h1 className="mt-5 ps-3">{props.data.city}</h1>
+      <div className="row ps-3">
+        <div className="col">
           <ul>
             <li>
               <FormattedDate date={props.data.date} />
@@ -17,17 +17,19 @@ export default function Weather(props) {
           </ul>
         </div>
         <div className="clearfix">
-          <div className="row mb-3">
-            <div className="col-8">
-              <WeatherTemperature celsius={props.data.temperature} />
+          <div className="row">
+            <div className="col">
               <img
                 className="icon"
                 src={props.data.icon}
                 alt="weather conditions"
               ></img>
             </div>
+            <div className="col">
+              <WeatherTemperature celsius={props.data.temperature} />
+            </div>
 
-            <div className="col-4">
+            <div className="col">
               <ul>
                 <li>Humidity: {props.data.humidity} %</li>
                 <li>Wind: {Math.round(props.data.wind)} km/h</li>

@@ -1,3 +1,5 @@
 .WeatherSearch {
   max-width: 600px;
+  display: block;
+  margin: 0 auto;
 }
